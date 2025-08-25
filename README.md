@@ -31,8 +31,9 @@ PostPath is an AI-powered tool to generate posts using **few-shot examples** and
 
 ---
 
+## UI Preview
+![UI Preview](ui/ui.jpg)
 
 
-
-The generated posts are for **references and educational purposes only**.  This project **does not claim authorship** of real individuals’ writing, and you should **not attribute generated content to anyone else**.  
+(The generated posts are for **references and educational purposes only**.  This project **does not claim authorship** of real individuals’ writing, and you should **not attribute generated content to anyone else**.  )
 
