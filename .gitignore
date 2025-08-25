@@ -1,0 +1,18 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore environment file (secrets)
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Jupyter/Streamlit artifacts
+.ipynb_checkpoints/
+.streamlit/
+
+# Ignore virtual environment folders
+venv/
+.env/
