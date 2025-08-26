@@ -11,7 +11,7 @@ def main():
     st.set_page_config(page_title="PostPath", layout="wide")
     st.title("PostPath - Guided Post Generator")
     st.markdown("""
-        Generate LinkedIn posts based on topic, author style, and additional context.
+        Generate posts based on topic, author style, and additional context.
         Provide extra details to guide the tone, situations, or audience for the post.
     """)
 
