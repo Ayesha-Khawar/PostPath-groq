@@ -1,6 +1,7 @@
 import streamlit as st
 from few_shot import FewShotPosts
 from post_generator import generate_post
+from PIL import Image
 
 # Options for length
 length_options = ["Short", "Medium", "Long"]
@@ -36,12 +37,21 @@ def main():
         height=120
     )
 
+    st.markdown("### Optional Image")
+    uploaded_image = st.file_uploader("Upload an image for the post (optional)", type=["png", "jpg", "jpeg"])
+    image_caption = ""
+    if uploaded_image:
+        image = Image.open(uploaded_image)
+        st.image(image, caption="Uploaded Image", use_column_width=True)
+        # Here, you can implement image captioning if you want, for now we just note that an image is included
+        image_caption = "The post should include content inspired by the uploaded image."
+
     st.markdown("---")
 
     # Generate button centered
     if st.button("Generate Post"):
         with st.spinner("Generating post..."):
-            post = generate_post(selected_length, selected_author, selected_tag, context=additional_context)
+            post = generate_post(selected_length, selected_author, selected_tag, context=additional_context, image_context=image_caption)
 
         # Display generated post
         st.markdown("### Generated Post")
